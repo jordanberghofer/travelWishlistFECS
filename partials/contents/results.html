@@ -1,1 +1,14 @@
-<h1>RESULTS SCREEN</h1>
+<!-- <div id="searchBar">
+    <input ng-model="searchText" type="text" placeholder="Search for Destinations!" size="25">
+</div> -->
+
+<div class="resultCardCont" ng-repeat="dest in pants | filter: {name:searchText.search}">
+    <div class="resultCard">
+        <div class="resultCardImg" style="background-image: url('images/destinations/{{dest.image}}') "></div>
+        <h3>Name: {{dest.name}}</h3>
+        <h4>Country: {{dest.country}}</h4>
+        <h6>Description: {{dest.description}}</h6>
+    </div>
+</div>
+
+<!-- | filter: {name:searchText, country:searchText, cold:corh, near:norf, modern:morh, urban:uorr, dangerous:dors} -->
