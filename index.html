@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Planet Life</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="planet">
+
+    <div id="navbar" ng-include="'partials/navbar.html'"></div>
+
+
+    <!-- content of the page -->
+    <div class="background" ng-view></div>
+
+
+    <div id="sidebar" ng-include="'partials/sidebar.html'"></div>
+    <div id="footer" ng-include="'partials/footer.html'"></div>
+    
+
+
+
+
+
+    <!-- third party dependencies -->
+    <script src="lib/node_modules/angular/angular.min.js"></script>
+    <script src="lib/node_modules/angular-route/angular-route.min.js"></script>
+
+    <!-- app -->
+    <script src="app/app.js"></script>
+    
+    <!-- fb-creds -->
+    <script src="app/values/fb-creds.js"></script>
+
+    <!-- factories -->
+    <script src="app/factories/home.factory.js"></script>
+    <script src="app/factories/login.factory.js"></script>
+    <script src="app/factories/quiz.factory.js"></script>
+    <script src="app/factories/results.factory.js"></script>
+    <script src="app/factories/savedDest.factory.js"></script>
+    <script src="app/factories/singleView.factory.js"></script>
+    <script src="app/factories/search.factory.js"></script>
+    
+    <!-- controllers -->
+    <script src="app/controllers/home.controller.js"></script>
+    <script src="app/controllers/login.controller.js"></script>
+    <script src="app/controllers/quiz.controller.js"></script>
+    <script src="app/controllers/results.controller.js"></script>
+    <script src="app/controllers/savedDest.controller.js"></script>
+    <script src="app/controllers/singleView.controller.js"></script>
+    <script src="app/controllers/navbar.controller.js"></script>
+    
+    
+
+</body>
+</html>
