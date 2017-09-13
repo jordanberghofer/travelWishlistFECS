@@ -2,6 +2,8 @@
 
 const app = angular.module("planet", ["ngRoute"]);
 
+const isAuth = (loginFact) => loginFact.isAuthenticated();
+
 app.config($routeProvider => {
 
     $routeProvider
@@ -11,23 +13,31 @@ app.config($routeProvider => {
         })
         .when('/home', {
             templateUrl: '/partials/contents/home.html',
-            controller: 'homeCtrl'
+            controller: 'homeCtrl',
+            resolve: {isAuth}
         })
         .when('/quiz', {
             templateUrl: '/partials/contents/quiz.html',
-            controller: 'quizCtrl'
+            controller: 'quizCtrl',
+            resolve: {isAuth}
         })
         .when('/results', {
             templateUrl: '/partials/contents/results.html',
-            controller: 'resultsCtrl'
+            controller: 'resultsCtrl',
+            resolve: {isAuth}
         })
         .when('/savedDest', {
             templateUrl: '/partials/contents/savedDest.html',
-            controller: 'savedDestCtrl'
+            controller: 'savedDestCtrl',
+            resolve: {isAuth}
         })
         .when('/singleView', {
             templateUrl: '/partials/contents/singleView.html',
-            controller: 'singleView'
+            controller: 'singleView',
+            resolve: {isAuth}
         })
         .otherwise('/');
 });
+
+app.run(($location, FBCreds)=> firebase.initializeApp(FBCreds));
+app.run(($rootScope)=> $rootScope.showSearch = false);
