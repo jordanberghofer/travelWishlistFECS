@@ -4,10 +4,17 @@
 //     console.log("resultsCtrl is registered");
 // });
 
-app.controller("resultsCtrl", function($scope, resultsFact, searchFact){
+app.controller("resultsCtrl", function($scope, resultsFact, searchFact, quizFact){
     console.log("resultsCtrl is registered");
 
     $scope.searchText = searchFact;
+    $scope.quiz = quizFact;
+    console.log("corh", $scope.quiz);
+    // $scope.norf = quizFact.norf;
+    // $scope.morh = quizFact.morh;
+    // $scope.uorr = quizFact.uorr;
+    // $scope.dors = quizFact.dors;    
+
 
     const showDestinations = function(){
         resultsFact.getDestinations()

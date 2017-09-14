@@ -1,47 +1,48 @@
 <div class="quizContent tint">
 
     <div class="coldHot"> 
-        <div id="cold" ng-model="corh" value="true"><p>Cold</p></div>
-
+        <div id="cold"><p>Cold</p></div>
+        <input class="firRad" type="radio" ng-model="quiz.corh" value="true">
         <h2 class="or"> -or- </h2>
-
-        <div id="hot" ng-model="corh" value="true"><p>Hot</p></div>
+        <input class="secRad" type="radio" ng-model="quiz.corh" value="false">
+        <div id="hot"><p>Hot</p></div>
     </div>
 
     <div class="nearFar"> 
-        <div id="near" ng-model="norf" value="true"><p>Near</p></div>
-
+        <div id="near"><p>Near</p></div>
+        <input class="firRad" type="radio" ng-model="quiz.norf" value="true">
         <h2 class="or"> -or- </h2>
-
-        <div id="far" ng-model="norf" value="false"><p>Far</p></div>
+        <input class="secRad" type="radio" ng-model="quiz.norf" value="false">
+        <div id="far"><p>Far</p></div>
     </div>
 
     <div class="modernHist"> 
-        <div id="modern" ng-model="morh" value="true"><p>Modern</p></div>
-
+        <div id="modern"><p>Modern</p></div>
+        <input class="firRad" type="radio" ng-model="quiz.morh" value="true">
         <h2 class="or"> -or- </h2>
-
-        <div id="historic" ng-model="morh" value="false"><p>Historic</p></div>
+        <input class="secRad" type="radio" ng-model="quiz.morh" value="false">
+        <div id="historic"><p>Historic</p></div>
     </div>
     
     <div class="urbanRural"> 
-        <div id="urban" ng-model="uorr" value="true"><p>Urban</p></div>
-
+        <div id="urban"><p>Urban</p></div>
+        <input class="firRad" type="radio" ng-model="quiz.uorr" value="true">
         <h2 class="or"> -or- </h2>
-
-        <div id="rural" ng-model="uorr" value="false"><p>Rural</p></div>
+        <input class="secRad" type="radio" ng-model="quiz.uorr" value="false">
+        <div id="rural"><p>Rural</p></div>
     </div>
 
     <div class="dangerousSafe"> 
-        <div id="dangerous" ng-model="dors" value="true"><p>Dangerous</p></div>
-
+        <div id="dangerous"><p>Dangerous</p></div>
+        <input class="firRad" type="radio" ng-model="quiz.dors" value="true">
         <h2 class="or"> -or- </h2>
-
-        <div id="safe" ng-model="norf" value="false"><p>Safe</p></div>
+        <input class="secRad" type="radio" ng-model="quiz.dors" value="false">
+        <div id="safe"><p>Safe</p></div>
     </div>
 
+
     <div id="quizSubBtn">
-        <a href="http://localhost:8081/#!/results"><button>Submit</button></a>
+        <a href="/#!/results"><button>Submit</button></a>
     </div>
     
 </div>

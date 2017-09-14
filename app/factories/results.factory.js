@@ -26,5 +26,21 @@ app.factory("resultsFact", function($q, $http, FBCreds){
             .catch(error => reject (error));
         });
     };
-    return {getDestinations};
+
+    const addDest = function(obj){
+        let newObj = JSON.stringify(obj);
+        return $http.post(`${url}/destinations.json`, newObj)
+            .then(data => data)
+            .catch(error => console.log("error", error.message));
+    };
+
+    const delDest = function(id){
+        return $q((resolve,reject)=>{
+            $http.delete(`${url}/destinations/${id}.json`)
+                .then(response => resolve(response))
+                .catch(error => reject(error));
+        });
+    };
+
+    return {getDestinations, addDest, delDest};
 });

@@ -170,11 +170,25 @@ ul {
 
 .or {
     text-align: center;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
     font-family: "Impact";
     color: white;
     text-shadow: 5px 5px #3E3E3E;
+}
+
+.firRad {
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.secRad {
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
 
 #quizSubBtn {
@@ -190,7 +204,7 @@ ul {
     grid-row-start: 2;
     grid-row-end: 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #cold{
@@ -209,8 +223,8 @@ ul {
 }
 
 #hot{
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -229,7 +243,7 @@ ul {
     grid-row-start: 4;
     grid-row-end: 5;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #near{
@@ -248,8 +262,8 @@ ul {
 }
 
 #far{
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -268,7 +282,7 @@ ul {
     grid-row-start: 6;
     grid-row-end: 7;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #modern {
@@ -287,8 +301,8 @@ ul {
 }
 
 #historic {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -307,7 +321,7 @@ ul {
     grid-row-start: 8;
     grid-row-end: 9;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #urban{
@@ -326,8 +340,8 @@ ul {
 }
 
 #rural{
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -346,7 +360,7 @@ ul {
     grid-row-start: 10;
     grid-row-end: 11;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #dangerous {
@@ -365,8 +379,8 @@ ul {
 }
 
 #safe {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -380,9 +394,14 @@ ul {
 }
 
 .resultCardImg {
+    float: right;
     background: no-repeat;
     background-size: 500px 300px, cover;
     background-position: center;
     height: 20em;
     width: 40em;
+}
+
+.hide {
+    display: none;
 }
