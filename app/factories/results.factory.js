@@ -5,17 +5,23 @@
 // });
 
 
-app.factory("resultsFact", function($q, $http, FBCreds){
+app.factory("resultsFact", function($q, $http, FBCreds, loginFact){
     console.log("resultsFact is registered");
+
+    const user = loginFact.getCurrentUser();
 
     const url = FBCreds.databaseURL;
     console.log("FBCreds.databaseURL", FBCreds.databaseURL);
 
     const makeDestArray = function(data){
-        console.log("obj in makeDestArray", makeDestArray);
-        console.log(data.data.destinations);
+        // console.log("obj in makeDestArray", makeDestArray);
+        // console.log(data.data.destinations);
 
-        return Object.keys(data.data).map(key => data.data[key]);
+        let shorts =  Object.keys(data.data).map(key => data.data[key]);
+        console.log("shorts", shorts);
+        
+        
+        return shorts;   
     };
 
     const getDestinations = function(){
@@ -28,19 +34,16 @@ app.factory("resultsFact", function($q, $http, FBCreds){
     };
 
     const addDest = function(obj){
-        let newObj = JSON.stringify(obj);
-        return $http.post(`${url}/destinations.json`, newObj)
+        console.log("obj", obj);
+        let newObj = angular.toJson(obj);
+
+        console.log("newObj", newObj);
+
+        return $http.post(`${url}/items.json`, newObj)
             .then(data => data)
             .catch(error => console.log("error", error.message));
     };
 
-    const delDest = function(id){
-        return $q((resolve,reject)=>{
-            $http.delete(`${url}/destinations/${id}.json`)
-                .then(response => resolve(response))
-                .catch(error => reject(error));
-        });
-    };
 
-    return {getDestinations, addDest, delDest};
+    return {getDestinations, addDest};
 });

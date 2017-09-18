@@ -1,35 +1,28 @@
 "use strict";
 
-app.controller("savedDestCtrl", function($scope, savedDestFact, $location, loginFact){
+app.controller("savedDestCtrl", function($scope, savedDestFact, resultsFact, $location, searchFact, loginFact, quizFact){
     console.log("savedDestCtrl is registered");
 
-    const user = loginFact.getCurrentUser();
+    $scope.searchText = searchFact;
+    $scope.quiz = quizFact;
 
-    $scope.wishlist = {
-        image: "",
-        name: "",
-        country: "",
-        cold: "",
-        description: "",
-        near: "",
-        modern: "",
-        urban: "",
-        dangerous: "",
-        uid: user
+    let uid = loginFact.getCurrentUser();
+
+    const showSaveDest = function(){
+        savedDestFact.getSaveDest(uid)
+            .then(data => {
+                console.log("data has been fetched", data);
+                $scope.pants = data;
+            })
+            .catch(error => console.log(error));
     };
-    
-    $scope.submitTask = function(){
-        savedDestFact.addTask($scope.task);
-            $location.url('/results');
+    showSaveDest();
+
+    $scope.delDest = function(id){
+        console.log("delDest in controller");
+        savedDestFact.delDest(id)
+            .then(() => showSaveDest());
     };
+
     
-    // const showDestinations = function(){
-    //     savedDestFact.getDestinations()
-    //         .then(data => {
-    //             console.log("data has been fetched", data);
-    //             $scope.dest = data;
-    //         })
-    //         .catch(error => console.log(error));
-    // };
-    // showDestinations();
 });

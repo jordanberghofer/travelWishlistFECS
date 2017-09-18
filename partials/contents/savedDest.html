@@ -1,1 +1,20 @@
-<h1>SAVED DESTINATIONS SCREEN</h1>
+<h1>Your Wishlist!</h1>
+<h2>Click on the Text to Edit.</h2>
+<div class="resultCardCont">
+    <div class="resultCard" ng-repeat="savDes in pants | filter: {name:searchText.search, cold:quiz.corh, near:quiz.norf, urban:quiz.uorr, modern:quiz.morh, dangerous:quiz.dors}">
+        <div class="resultCardImg" style="background-image: url('images/destinations/{{savDes.image}}')"></div>
+        <div ng-model="savDes.name"><h3>Name: {{savDes.name}}</h3></div>
+        <div ng-model="savDes.country"><h4>Country: {{savDes.country}}</h4></div>
+        <div ng-model="savDes.description"><h6>Description: {{savDes.description}}</h6></div>
+
+        <div class="hide">
+            <div ng-model="savDes.cold"><h6>Cold: {{savDes.cold}} </h6></div>
+            <div ng-model="savDes.urban"><h6>Urban: {{savDes.urban}} </h6></div>
+            <div ng-model="savDes.near"><h6>Near: {{savDes.near}} </h6></div>
+            <div ng-model="savDes.modern"><h6>Modern: {{savDes.modern}} </h6></div>
+            <div ng-model="savDes.dangerous"><h6>Dangerous: {{savDes.dangerous}} </h6></div>
+        </div>  
+
+        <button class="center" ng-click="delDest(savDes.id)">Delete</button>
+    </div>
+</div>
