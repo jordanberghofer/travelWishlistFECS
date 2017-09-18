@@ -12,8 +12,8 @@ ul {
 #sidebar{
     padding: 4%;
     font-family: "Impact";
-    color: white;
-    text-shadow: 2px 2px #3E3E3E;
+    color: #0E2256;
+    text-shadow: 2px 2px rgba(49, 83, 178, 0.98);
     
     background: rgba(73,165,191,1);
     background: -moz-linear-gradient(top, rgba(73,165,191,1) 0%, rgba(117,189,209,1) 52%, rgba(147,206,222,1) 99%, rgba(147,206,222,1) 100%);
@@ -90,6 +90,17 @@ ul {
     box-shadow: inset 0 0 120px #000000;
 }
 
+.resultCardCont {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    overflow: auto;
+    display: grid;
+    background: pink;
+    box-shadow: inset 0 0 120px #000000;
+}
+
 // .tint {
 //     background-color: white;
 // }
@@ -159,11 +170,25 @@ ul {
 
 .or {
     text-align: center;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
     font-family: "Impact";
     color: white;
     text-shadow: 5px 5px #3E3E3E;
+}
+
+.firRad {
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.secRad {
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
 
 #quizSubBtn {
@@ -179,7 +204,7 @@ ul {
     grid-row-start: 2;
     grid-row-end: 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #cold{
@@ -198,8 +223,8 @@ ul {
 }
 
 #hot{
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -218,7 +243,7 @@ ul {
     grid-row-start: 4;
     grid-row-end: 5;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #near{
@@ -237,8 +262,8 @@ ul {
 }
 
 #far{
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -257,7 +282,7 @@ ul {
     grid-row-start: 6;
     grid-row-end: 7;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #modern {
@@ -276,8 +301,8 @@ ul {
 }
 
 #historic {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -296,7 +321,7 @@ ul {
     grid-row-start: 8;
     grid-row-end: 9;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #urban{
@@ -315,8 +340,8 @@ ul {
 }
 
 #rural{
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -335,7 +360,7 @@ ul {
     grid-row-start: 10;
     grid-row-end: 11;
     display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(5, 1fr)
 }
 
 #dangerous {
@@ -354,8 +379,8 @@ ul {
 }
 
 #safe {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
     border: solid;
     border-width: thick;
     border-radius: 10px;
@@ -369,8 +394,14 @@ ul {
 }
 
 .resultCardImg {
-    background-size: cover;
+    float: right;
+    background: no-repeat;
+    background-size: 500px 300px, cover;
     background-position: center;
     height: 20em;
     width: 40em;
+}
+
+.hide {
+    display: none;
 }

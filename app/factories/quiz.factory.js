@@ -2,5 +2,11 @@
 
 app.factory("quizFact", function($q, $http){
     console.log("quizFact is registered");
-    return {};
+    return {
+        corh: "",
+        norf: "",
+        morh: "",
+        uorr: "",
+        dors: ""
+    };
 });

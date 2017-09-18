@@ -2,12 +2,22 @@
     <input ng-model="searchText" type="text" placeholder="Search for Destinations!" size="25">
 </div> -->
 
-<div class="resultCardCont" ng-repeat="dest in pants | filter: {name:searchText.search}">
-    <div class="resultCard">
+<div class="resultCardCont">
+    <div class="resultCard" ng-repeat="dest in pants | filter: {name:searchText.search, cold:quiz.corh, near:quiz.norf, urban:quiz.uorr, modern:quiz.morh, dangerous:quiz.dors}">
         <div class="resultCardImg" style="background-image: url('images/destinations/{{dest.image}}') "></div>
-        <h3>Name: {{dest.name}}</h3>
-        <h4>Country: {{dest.country}}</h4>
-        <h6>Description: {{dest.description}}</h6>
+        <div ng-model="dest.name"><h3>Name: {{dest.name}}</h3></div>
+        <div ng-model="dest.country"><h4>Country: {{dest.country}}</h4></div>
+        <div ng-model="dest.description"><h6>Description: {{dest.description}}</h6></div>
+
+        <div class="hide">
+            <div ng-model="dest.cold"><h6>Cold: {{dest.cold}} </h6></div>
+            <div ng-model="dest.urban"><h6>Urban: {{dest.urban}} </h6></div>
+            <div ng-model="dest.near"><h6>Near: {{dest.near}} </h6></div>
+            <div ng-model="dest.modern"><h6>Modern: {{dest.modern}} </h6></div>
+            <div ng-model="dest.dangerous"><h6>Dangerous: {{dest.dangerous}} </h6></div>
+        </div>  
+
+        <button class="center" ng-click="submitDest(dest)">Add to Wishlist</button>
     </div>
 </div>
 
