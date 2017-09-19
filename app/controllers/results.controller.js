@@ -33,5 +33,6 @@ app.controller("resultsCtrl", function($scope, resultsFact, loginFact, searchFac
             })
             .catch(error => console.log(error));
     };
+    
     showDestinations();
 });

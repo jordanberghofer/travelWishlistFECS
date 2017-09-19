@@ -1,11 +1,19 @@
 <h1>Your Wishlist!</h1>
-<h2>Click on the Text to Edit.</h2>
+<h2>Click on the Edit Button below to edit your trip!</h2>
 <div class="resultCardCont">
     <div class="resultCard" ng-repeat="savDes in pants | filter: {name:searchText.search, cold:quiz.corh, near:quiz.norf, urban:quiz.uorr, modern:quiz.morh, dangerous:quiz.dors}">
         <div class="resultCardImg" style="background-image: url('images/destinations/{{savDes.image}}')"></div>
-        <div ng-model="savDes.name"><h3>Name: {{savDes.name}}</h3></div>
-        <div ng-model="savDes.country"><h4>Country: {{savDes.country}}</h4></div>
+        <div ng-model="savDes.tripName"><h2>Trip Name: {{savDes.tripName}}</h2></div>
+        <div ng-model="savDes.name"><h3>Location: {{savDes.name}}</h3></div>
+        <div ng-model="savDes.country"><h5>Country: {{savDes.country}}</h5></div>
         <div ng-model="savDes.description"><h6>Description: {{savDes.description}}</h6></div>
+        <div ng-model="savDes.planeCost"><h5>Cost of Flight: {{savDes.planeCost}}</h5></div>
+        <div ng-model="savDes.hotelCost"><h5>Cost of Hotel: {{savDes.hotelCost}}</h5></div>
+        <div ng-model="savDes.foodCost"><h5>Estimated Food Cost: {{savDes.foodCost}}</h5></div>
+        <div ng-model="savDes.notes"><h6>Notes: {{savDes.notes}}</h6></div>
+        <div ng-model="savDes.passport"><h5>Passport: {{savDes.passport}}</h5></div>
+        
+
 
         <div class="hide">
             <div ng-model="savDes.cold"><h6>Cold: {{savDes.cold}} </h6></div>
@@ -16,5 +24,6 @@
         </div>  
 
         <button class="center" ng-click="delDest(savDes.id)">Delete</button>
+        <button class="center"><a ng-href="#!/singleView/{{savDes.id}}">Edit</a></button>
     </div>
 </div>

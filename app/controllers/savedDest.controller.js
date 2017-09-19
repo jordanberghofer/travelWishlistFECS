@@ -23,6 +23,7 @@ app.controller("savedDestCtrl", function($scope, savedDestFact, resultsFact, $lo
         savedDestFact.delDest(id)
             .then(() => showSaveDest());
     };
+    
 
     
 });
