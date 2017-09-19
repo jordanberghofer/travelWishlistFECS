@@ -31,9 +31,9 @@ app.config($routeProvider => {
             controller: 'savedDestCtrl',
             resolve: {isAuth}
         })
-        .when('/singleView', {
+        .when('/singleView/:id', {
             templateUrl: '/partials/contents/singleView.html',
-            controller: 'singleView',
+            controller: 'singleViewCtrl',
             resolve: {isAuth}
         })
         .otherwise('/');

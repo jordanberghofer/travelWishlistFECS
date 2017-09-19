@@ -1,1 +1,50 @@
 <h1>SINGLE VIEW SCREEN</h1>
+
+<div class="resultCardCont">
+    <div class="resultCard">
+        <div class="resultCardImg" style="background-image: url('images/destinations/{{wishlist.image}}')"></div>
+        <div ng-model="wishlist.name"><h3>Name: {{wishlist.name}}</h3></div>
+        <div ng-model="wishlist.country"><h4>Country: {{wishlist.country}}</h4></div>
+        <div ng-model="wishlist.description"><h6>Description: {{wishlist.description}}</h6></div>
+
+        <div>
+            <form>
+                Name of Trip:<br>
+                <input ng-model="wishlist.tripName" type="text"><br>
+
+                Cost of Plane: <br>
+                <input ng-model="wishlist.planeCost" type="text"><br>
+
+                Cost of Hotel:<br>
+                <input ng-model="wishlist.hotelCost" type="text"><br>
+
+                Budget for Food:<br>
+                <input ng-model="wishlist.foodCost" type="text"><br>
+
+                <div>
+                    Passport Needed?:<br>
+                    yes<input ng-model="wishlist.passport" type="radio" value="true">
+                    no<input ng-model="wishlist.passport" type="radio" value="false"><br>
+                </div>
+
+                Notes:<br>
+                <input ng-model="wishlist.notes" size="100" type="text"><br>
+
+                <button class="center" ng-click="submitEdit()">Submit</button>
+
+            </form>
+        </div>
+
+<!-- 
+        <div class="hide">
+            <div ng-model="wishlist.cold"><h6>Cold: {{wishlist.cold}} </h6></div>
+            <div ng-model="wishlist.urban"><h6>Urban: {{wishlist.urban}} </h6></div>
+            <div ng-model="wishlist.near"><h6>Near: {{wishlist.near}} </h6></div>
+            <div ng-model="wishlist.modern"><h6>Modern: {{wishlist.modern}} </h6></div>
+            <div ng-model="wishlist.dangerous"><h6>Dangerous: {{wishlist.dangerous}} </h6></div>
+        </div>   -->
+
+
+
+    </div>
+</div>
