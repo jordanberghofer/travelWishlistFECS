@@ -24,5 +24,5 @@ app.factory("singleViewFact", function($q, $http, FBCreds){
         });
     };
 
-    return {getSingDest, editWish};
+    return {getSingDest, editWish}; 
 });

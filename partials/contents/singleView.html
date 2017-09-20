@@ -5,7 +5,7 @@
         <div class="resultCardImg" style="background-image: url('images/destinations/{{wishlist.image}}')"></div>
         <div ng-model="wishlist.name"><h3>Name: {{wishlist.name}}</h3></div>
         <div ng-model="wishlist.country"><h4>Country: {{wishlist.country}}</h4></div>
-        <div ng-model="wishlist.description"><h6>Description: {{wishlist.description}}</h6></div>
+        <div><textarea ng-model="wishlist.description" rows="5" cols="75">{{wishlist.description}}</textarea></div>
 
         <div>
             <form>
@@ -13,18 +13,18 @@
                 <input ng-model="wishlist.tripName" type="text"><br>
 
                 Cost of Plane: <br>
-                <input ng-model="wishlist.planeCost" type="text"><br>
+                <input ng-model="wishlist.planeCost" type="text" placeholder="$00.00" step=".01"><br>
 
                 Cost of Hotel:<br>
-                <input ng-model="wishlist.hotelCost" type="text"><br>
+                <input ng-model="wishlist.hotelCost" type="text" placeholder="$00.00" step=".01"><br>
 
                 Budget for Food:<br>
-                <input ng-model="wishlist.foodCost" type="text"><br>
+                <input ng-model="wishlist.foodCost" type="text" placeholder="$00.00" step=".01"><br>
 
                 <div>
                     Passport Needed?:<br>
-                    yes<input ng-model="wishlist.passport" type="radio" value="true">
-                    no<input ng-model="wishlist.passport" type="radio" value="false"><br>
+                    yes<input ng-model="wishlist.passport" type="radio" value="Yes">
+                    no<input ng-model="wishlist.passport" type="radio" value="No"><br>
                 </div>
 
                 Notes:<br>

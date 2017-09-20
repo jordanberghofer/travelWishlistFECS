@@ -4,7 +4,7 @@ app.controller("navCtrl", function($scope, $window, searchFact, loginFact){
     console.log("navCtrl is registered");
 
     $scope.isLoggedIn = false;
-
+    $scope.searchText = searchFact;
     $scope.logOut = () => loginFact.logOut();
 
     firebase.auth().onAuthStateChanged(function(user) {

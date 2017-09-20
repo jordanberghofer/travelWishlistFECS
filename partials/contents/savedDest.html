@@ -10,8 +10,9 @@
         <div ng-model="savDes.planeCost"><h5>Cost of Flight: {{savDes.planeCost}}</h5></div>
         <div ng-model="savDes.hotelCost"><h5>Cost of Hotel: {{savDes.hotelCost}}</h5></div>
         <div ng-model="savDes.foodCost"><h5>Estimated Food Cost: {{savDes.foodCost}}</h5></div>
-        <div ng-model="savDes.notes"><h6>Notes: {{savDes.notes}}</h6></div>
         <div ng-model="savDes.passport"><h5>Passport: {{savDes.passport}}</h5></div>
+        <div ng-model="savDes.notes"><h6>Notes: {{savDes.notes}}</h6></div>
+
         
 
 
@@ -24,6 +25,6 @@
         </div>  
 
         <button class="center" ng-click="delDest(savDes.id)">Delete</button>
-        <button class="center"><a ng-href="#!/singleView/{{savDes.id}}">Edit</a></button>
+        <a ng-href="#!/singleView/{{savDes.id}}"><button class="center">Edit</button></a>
     </div>
 </div>
