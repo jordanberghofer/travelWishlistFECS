@@ -11,50 +11,77 @@ ul {
 
 #sidebar{
     padding: 4%;
-    font-family: "Impact";
-    color: #0E2256;
-    text-shadow: 2px 2px rgba(49, 83, 178, 0.98);
-    
-    background: rgba(73,165,191,1);
-    background: -moz-linear-gradient(top, rgba(73,165,191,1) 0%, rgba(117,189,209,1) 52%, rgba(147,206,222,1) 99%, rgba(147,206,222,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(73,165,191,1)), color-stop(52%, rgba(117,189,209,1)), color-stop(99%, rgba(147,206,222,1)), color-stop(100%, rgba(147,206,222,1)));
-    background: -webkit-linear-gradient(top, rgba(73,165,191,1) 0%, rgba(117,189,209,1) 52%, rgba(147,206,222,1) 99%, rgba(147,206,222,1) 100%);
-    background: -o-linear-gradient(top, rgba(73,165,191,1) 0%, rgba(117,189,209,1) 52%, rgba(147,206,222,1) 99%, rgba(147,206,222,1) 100%);
-    background: -ms-linear-gradient(top, rgba(73,165,191,1) 0%, rgba(117,189,209,1) 52%, rgba(147,206,222,1) 99%, rgba(147,206,222,1) 100%);
-    background: linear-gradient(to bottom, rgba(73,165,191,1) 0%, rgba(117,189,209,1) 52%, rgba(147,206,222,1) 99%, rgba(147,206,222,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49a5bf', endColorstr='#93cede', GradientType=0 );
-
-    background-size: cover;
-    background-position: center;
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
+    color: #CDC19B;
+    text-shadow: 2px 2px #797258;
+    background-color: #2A2F32;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+    border-width: 2px;
+    border-right-style: solid;
+    border-right-color: #CDC19B;
 
 }
 
+#sidebar a{
+    color: inherit;
+}
+
 #navbar {
-    background-color: #51517A;
+    background-color: #2A2F32;
     border-bottom-style: solid;
-    border-width: 10px;
-    border-bottom-color: steelblue;
+    border-width: 2px;
+    border-bottom-color: #CDC19B;
     padding: 5px;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+
 }
 
 #footer {
-    font-family: "Impact";
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
     font-size: 1.25em;
     text-align: center;
-    background: lightblue;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+    border-width: 2px;
+    border-top-style: solid;
+    border-top-color: #CDC19B;
+    color: #CDC19B;
+    text-shadow: 2px 2px #988F72;
+    background-color: #2A2F32;
     
+}
+
+#logCont {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, .5fr);
+    background: url("/images/buttons/logIn.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #CDC19B;
+    text-shadow: 2px 2px #797258;
+}
+
+.logRow1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.logRow2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
 .homeContent {
@@ -65,7 +92,7 @@ ul {
     overflow: auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(10, .5fr);
     background: url("/images/contentBG/waterfall.gif") no-repeat;
     background-size: cover;
     background-position: center;
@@ -73,6 +100,7 @@ ul {
 }
 
 .quizContent {
+    height: 600px;
     z-index: 1;
     text-align: center;
     grid-column-start: 2;
@@ -83,7 +111,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    background: linear-gradient(to top, black 0%,#7C7CFF 100%), url("/images/contentBG/contentBG.png") no-repeat;
+    background: url("/images/buttons/navbar2.jpg") no-repeat;
     background-blend-mode: color-dodge;
     background-size: cover;
     background-position: center;
@@ -91,17 +119,42 @@ ul {
 }
 
 .resultCardCont {
+    height: 500px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    overflow: auto;
+    grid-row-gap: 20%;
+    overflow: scroll;
     display: grid;
     background: pink;
     box-shadow: inset 0 0 120px #000000;
 }
 
-// .tint {
+.resultCard {
+    margin-top: 10%;
+    margin-bottom: 6%;
+}
+
+.resultCardCont::-webkit-scrollbar{
+    width: 20px; 
+    background: transparent;
+    border-radius: 10px;
+}
+
+.resultCardCont::-webkit-scrollbar-thumb{
+    background: #CDC19B;
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+
+    // .tint {
 //     background-color: white;
 // }
 
@@ -112,14 +165,21 @@ ul {
 
 #logo {
     float: left;
+    opacity: .75;
+}
+
+#brand-img {
+    height: 100px;
+    width: 100px; 
 }
 
 #searchBar {
     align-content: center;
+
 }
 
 #homeTitle {
-    font-family: "Impact";
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     font-size: large;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
@@ -132,13 +192,13 @@ ul {
 
 #homeScrnDestBtn {
     text-align: center;
-    font-family: "Impact";
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     padding: 10%;
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 3;
     grid-row-end: 5;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px 50px 10px;
     background: url("/images/buttons/savedDestBG.png"); 
@@ -151,13 +211,13 @@ ul {
 
 #homeScrnQuizBtn {
     text-align: center;
-    font-family: "Impact";
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     padding: 10%;
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 6;
     grid-row-end: 8;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px 50px 10px;
     background: url("/images/buttons/takeQuizBG.png"); 
@@ -172,7 +232,7 @@ ul {
     text-align: center;
     grid-column-start: 3;
     grid-column-end: 4;
-    font-family: "Impact";
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 5px 5px #3E3E3E;
 }
@@ -210,29 +270,30 @@ ul {
 #cold{
     grid-column-start: 1;
     grid-column-end: 2;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background-image: url("/images/quiz/cold.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
+    
 }
 
 #hot{
     grid-column-start: 5;
     grid-column-end: 6;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background: url("/images/quiz/hot.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
 }
@@ -249,14 +310,14 @@ ul {
 #near{
     grid-column-start: 1;
     grid-column-end: 2;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background: url("/images/quiz/near.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
 }
@@ -264,14 +325,14 @@ ul {
 #far{
     grid-column-start: 5;
     grid-column-end: 6;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background: url("/images/quiz/far.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
 }
@@ -288,14 +349,14 @@ ul {
 #modern {
     grid-column-start: 1;
     grid-column-end: 2;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background: url("/images/quiz/modern.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
 }
@@ -303,14 +364,14 @@ ul {
 #historic {
     grid-column-start: 5;
     grid-column-end: 6;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background: url("/images/quiz/historic.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
 }
@@ -327,14 +388,14 @@ ul {
 #urban{
     grid-column-start: 1;
     grid-column-end: 2;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background: url("/images/quiz/urban.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
 }
@@ -342,14 +403,14 @@ ul {
 #rural{
     grid-column-start: 5;
     grid-column-end: 6;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background: url("/images/quiz/rural.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
 }
@@ -366,14 +427,14 @@ ul {
 #dangerous {
     grid-column-start: 1;
     grid-column-end: 2;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background: url("/images/quiz/dangerous.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
 }
@@ -381,14 +442,14 @@ ul {
 #safe {
     grid-column-start: 5;
     grid-column-end: 6;
-    border: solid;
+    border: outset;
     border-width: thick;
     border-radius: 10px;
     background: url("/images/quiz/safe.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 40px #000000;
-    font-family: "Impact";
+    box-shadow: inset 0 0 40px #000000, 10px 10px 35px -1px rgb(186, 186, 186);
+    font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;;
     color: white;
     text-shadow: 2px 2px #3E3E3E;
 }
